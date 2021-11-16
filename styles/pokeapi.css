@@ -1,0 +1,128 @@
+body {
+  background-color: orangered;
+  margin: 0;
+  font-family: rubik;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  padding: 40px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 54px;
+  -webkit-animation: fromZ 500ms linear;
+          animation: fromZ 500ms linear;
+}
+
+.card {
+  padding: 40px;
+  background-color: #e5e5e5;
+  color: #222;
+  text-align: center;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+}
+
+@-webkit-keyframes fromZ {
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes fromZ {
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.card-subtitle {
+  font-size: 18px;
+  font-weight: lighter;
+  color: #666;
+  margin-top: 5px;
+}
+
+.card-image {
+  height: 180px;
+}
+
+#pokedex {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+}
+
+.card:hover {
+  -webkit-animation: bounce 0.5s linear;
+          animation: bounce 0.5s linear;
+  border: 5px solid #adb5bd;
+  border-radius: 15px;
+}
+
+@-webkit-keyframes bounce {
+  20% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  40% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  60% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  80% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes bounce {
+  20% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  40% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  60% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  80% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+/*# sourceMappingURL=pokeapi.css.map */
