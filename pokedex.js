@@ -1,11 +1,12 @@
+// Crear array de URLs
+const arrUrl = [];
+for (let i = 1; i <= 150; i++) {
+  const baseUrl = `https://pokeapi.co/api/v2/pokemon/${i}`;
+  arrUrl.push(baseUrl);
+}
+//Función obtener pokemons
 function getPokemons() {
   try {
-    //Crear array de URLs
-    const arrUrl = [];
-    for (let i = 1; i <= 150; i++) {
-      const baseUrl = `https://pokeapi.co/api/v2/pokemon/${i}`;
-      arrUrl.push(baseUrl);
-    }
     //Mapear array de URLs y hacer fetch por cada una
     const llamadasApi = arrUrl.map((url) =>
       fetch(url).then((response) => response.json())
@@ -14,7 +15,7 @@ function getPokemons() {
     Promise.all(llamadasApi).then((results) => {
       const pokemonData = results.map((result) => ({
         name: result.name,
-        image: result.sprites["front_default"],
+        image: result.sprites.other.dream_world["front_default"],
         type: result.types.map((type) => type.type.name).join(", "),
         id: result.id,
       }));
@@ -28,6 +29,7 @@ function getPokemons() {
 
 getPokemons();
 
+//Función pintar pokemons en Html
 function mostrarHTML(datos) {
   const lista = document.querySelector("#pokedex");
   let elementLi = document.createElement("li");

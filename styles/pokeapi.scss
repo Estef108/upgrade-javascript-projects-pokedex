@@ -23,6 +23,9 @@ body {
     color: #222;
     text-align: center;
     transition: all 150ms;
+    border: 2px solid gray;
+    border-radius: 15px;
+    transition: all 400ms;
   }
 
   @keyframes fromZ{
@@ -47,7 +50,8 @@ body {
     margin-top: 5px;
   }
   .card-image {
-    height: 180px;
+    height: 110px;
+    padding: 25px;
   }
   #pokedex {
     padding-inline-start: 0;
@@ -57,7 +61,8 @@ body {
   }
   .card:hover {
     animation: bounce 0.5s linear;
-    border: 5px solid #adb5bd;
+    // border: 5px solid #adb5bd;
+    box-shadow: 0 0 15px 5px gray;
     border-radius:15px;
   }
   @keyframes bounce {

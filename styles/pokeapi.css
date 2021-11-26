@@ -29,6 +29,10 @@ h1 {
   text-align: center;
   -webkit-transition: all 150ms;
   transition: all 150ms;
+  border: 2px solid gray;
+  border-radius: 15px;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
 }
 
 @-webkit-keyframes fromZ {
@@ -68,7 +72,8 @@ h1 {
 }
 
 .card-image {
-  height: 180px;
+  height: 110px;
+  padding: 25px;
 }
 
 #pokedex {
@@ -84,7 +89,8 @@ h1 {
 .card:hover {
   -webkit-animation: bounce 0.5s linear;
           animation: bounce 0.5s linear;
-  border: 5px solid #adb5bd;
+  -webkit-box-shadow: 0 0 15px 5px gray;
+          box-shadow: 0 0 15px 5px gray;
   border-radius: 15px;
 }
 
